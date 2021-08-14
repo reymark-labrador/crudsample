@@ -1,0 +1,39 @@
+﻿@model CrudApplication.Models.Department
+
+<h1>Details</h1>
+
+<div>
+    <h4>Department</h4>
+    <hr />
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.ID)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Code)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Name)
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var user in ViewData["Users"] as IList<User>)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => user.ID)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => user.Code)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => user.Name)
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
